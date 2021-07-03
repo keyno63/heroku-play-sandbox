@@ -1,6 +1,8 @@
 name := "heroku-play-sandbox"
  
-version := "1.0" 
+version := "1.0"
+
+run / fork := true
       
 lazy val `heroku_play_sandbox` = (project in file(".")).enablePlugins(PlayScala)
 
