@@ -1,0 +1,1 @@
+web: target/universal/stage/bin/heroku-play-sandbox -Dhttp.port=$PORT -Dplay.http.secret.key=$SERCRET_KEY

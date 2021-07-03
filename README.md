@@ -23,7 +23,19 @@ heroku の [scala-play](https://devcenter.heroku.com/articles/deploying-scala-an
   `Compile / herokuJdkVersion` で設定します
   ※ heroku 側の JDK runtime と sbt 実行時のローカル Java のバージョンが揃っているか確認しましょう  
   デフォルトでは JDK 8 になっています
-- application.conf に以下を追加
-  - play.filters.hosts.allowed
-  - play.http.secret.key
+- 起動に必要な設定
+  - application.conf に以下を追加する場合
+    - play.filters.hosts.allowed
+  - heroku 側に設定をする場合
+    - Procfile にオプションを追加
+      `-Dplay.filters.hosts.allowed=$ALLOW_HOST`
+    - `https://dashboard.heroku.com/apps/<app_name>/settings` に設定を追加
+  - secret key の設定 
+    - application.conf に以下を追加する場合
+      - play.http.secret.key
+    - heroku 側に設定をする場合
+      - Procfile にオプションを追加
+        `-Dplay.http.secret.key=$SERCRET_KEY`
+      - `https://dashboard.heroku.com/apps/<app_name>/settings` に設定を追加
+  
 - `sbt stage deployHeroku` コマンドでデプロイを実行
