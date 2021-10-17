@@ -1,5 +1,7 @@
 # heroku-play-sandbox
 
+[![Build](https://github.com/keyno63/heroku-play-sandbox/actions/workflows/build.yaml/badge.svg)](https://github.com/keyno63/heroku-play-sandbox/actions/workflows/build.yaml)
+
 heroku に play-scala をデプロイするのに確認するようのレポジトリです
 
 ## Usage
