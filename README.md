@@ -2,6 +2,22 @@
 
 heroku に play-scala をデプロイするのに確認するようのレポジトリです
 
+## Usage
+
+### build
+
+```shell
+sbt compile
+```
+
+### test
+
+```shell
+sbt test
+```
+
+but, test is not implemented yet.
+
 ## deploy
 
 ### localhost
@@ -39,3 +55,8 @@ heroku の [scala-play](https://devcenter.heroku.com/articles/deploying-scala-an
       - `https://dashboard.heroku.com/apps/<app_name>/settings` に設定を追加
   
 - `sbt stage deployHeroku` コマンドでデプロイを実行
+
+## LICENSE
+
+This repository is Apache2 License.  
+see [License](./LICENSE) file.
